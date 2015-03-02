@@ -1,14 +1,14 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', [
+  'starter.services'
+])
 
-.controller('MapCtrl', function($scope, $ionicLoading) {
+.controller('MapCtrl', function($scope, $ionicLoading, nTracImages) {
   $scope.mapCreated = function(map) {
     $scope.map = map;
   };
 
-  // document.addEventListener("deviceready", onDeviceReady, false);
-  // function onDeviceReady() {
-  //     console.log("navigator.geolocation works well");
-  // }
+  console.log(nTracImages)
+  $scope.posImage = nTracImages.happy;
 
   $scope.currentPosition = { 
     lat:null,
