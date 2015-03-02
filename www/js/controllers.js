@@ -5,10 +5,16 @@ angular.module('starter.controllers', [])
     $scope.map = map;
   };
 
-  document.addEventListener("deviceready", onDeviceReady, false);
-  function onDeviceReady() {
-      console.log("navigator.geolocation works well");
-  }
+  // document.addEventListener("deviceready", onDeviceReady, false);
+  // function onDeviceReady() {
+  //     console.log("navigator.geolocation works well");
+  // }
+
+  $scope.currentPosition = { 
+    lat:null,
+    long: null
+  };
+
   $scope.centerOnMe = function () {
     console.log("Centering");
     if (!$scope.map) {
@@ -23,6 +29,7 @@ angular.module('starter.controllers', [])
     navigator.geolocation.getCurrentPosition(function (pos) {
       console.log('Got pos', pos);
       $scope.map.setCenter(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
+
       $scope.loading.hide();
     }, function (error) {
       alert('Unable to get location: ' + error.message);
