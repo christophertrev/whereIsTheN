@@ -5,7 +5,6 @@ angular.module('starter.directives', [])
     restrict: 'E',
     scope: {
       onCreate: '&',
-      image: '='
     },
     link: function ($scope, $element, $attr) {
       function initialize() {
