@@ -24,7 +24,8 @@ angular.module('starter.controllers', [
         trainMarkers[vechicle.id] = new google.maps.Marker({
           position: new google.maps.LatLng(vechicle.lat, vechicle.lon),
           map: $scope.map,
-          title: vechicle.id.toString(),
+          // title: vechicle.id.toString(),
+          title: vechicle.heading.toString(),
           icon: posImages.train,
         });
       } else {
