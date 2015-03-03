@@ -2,7 +2,8 @@ angular.module('starter', [
   'ionic',
   'starter.controllers',
   'starter.directives',
-  'starter.services'
+  'starter.services',
+  'firebase'
   ])
 
 .run(function($ionicPlatform) {

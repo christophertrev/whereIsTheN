@@ -15,6 +15,11 @@
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
+    <!-- Firebase -->
+    <script src="https://cdn.firebase.com/js/client/2.1.2/firebase.js"></script>
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/0.9.2/angularfire.min.js"></script>
+
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB16sGmIekuGIvYOfNoW9T44377IU2d2Es&sensor=true"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
@@ -29,7 +34,7 @@
 
   <body ng-app="starter" ng-controller="MapCtrl">
     <ion-header-bar class="bar-stable">
-      <h1 class="title">Map</h1>
+      <h1 class="title">Map {{data}}</h1>
     </ion-header-bar>
 
     <ion-content scroll="false">
